@@ -5,11 +5,11 @@ from distutils.core import setup
 
 
 setup(name='python-parallelize',
-      version='1.0.0.0',
+      version='1.0.0.0_qb',
       description='Make the for loop run in parallel',
-      author='Nat Pryce',
-      author_email='about-python-parallelize@natpryce.com',
-      url='http://github.com/npryce/python-parallelize',
+      author='IncubatorShokuhou',
+      author_email='lh@lasg.iap.ac.cn',
+      url='https://github.com/IncubatorShokuhou/python-parallelize',
       
       license="Apache 2.0",
       

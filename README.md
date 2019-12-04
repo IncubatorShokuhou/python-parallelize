@@ -3,6 +3,7 @@ python-parallelize
 
 Simple fork/join parallelism with Python's `for` loop
 
+人肉闭包好！
 
 Quick Start
 -----------
@@ -13,16 +14,6 @@ Parallel iteration with a process/CPU:
 import os
 from parallelize import parallelize
     
-for i in parallelize(range(100)):
-    print(os.getpid(), i)
-```
-
-Parallel iteration with a process/item:
-
-```python
-import os
-from parallelize import parallelize, per_item
-    
-for i in parallelize(range(100), fork=per_item):
+for i in parallelize(range(100),cpu_number = "half"):   #cpu_number can be "all","half","quarter" or any integer
     print(os.getpid(), i)
 ```
