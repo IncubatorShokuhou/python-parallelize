@@ -3,7 +3,7 @@ from itertools import islice
 import os
 import multiprocessing
 __version__ = '1.0.0.0_qb'
-def get_per_cpu(seq,cpu_number):
+def get_per_cpu(seq,cpu_number= "half"):
     if isinstance(cpu_number, int):
         cpu_number_in = cpu_number
     elif isinstance(cpu_number,float):
