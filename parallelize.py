@@ -24,7 +24,7 @@ def get_per_cpu(seq,cpu_number= "half"):
         print("cpu number is too large. Turn into max cpu count.")
         cpu_number_in1 = min(cpu_number_in,multiprocessing.cpu_count())
         cpu_number_in = cpu_number_in1
-    print("cpu number:",cpu_number_in)
+    #print("cpu number:",cpu_number_in)
     def per_cpu(seq,cpu_number_in):
         return (islice(seq, cpu, None, cpu_number_in) for cpu in range(cpu_number_in))
     return per_cpu(seq,cpu_number_in)
