@@ -29,7 +29,7 @@ def get_per_cpu(seq,cpu_number= "half"):
         return (islice(seq, cpu, None, cpu_number_in) for cpu in range(cpu_number_in))
     return per_cpu(seq,cpu_number_in)
 
-def parallelize(seq,cpu_number):
+def parallelize(seq,cpu_number= "half"):
     pids = []
     fork = get_per_cpu(seq,cpu_number=cpu_number)
     for slice in fork:
