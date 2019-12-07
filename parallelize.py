@@ -30,6 +30,11 @@ def get_per_cpu(seq,cpu_number= "half"):
     return per_cpu(seq,cpu_number_in)
 
 def parallelize(seq,cpu_number= "half"):
+    '''
+    input:
+    seq: for loop
+    cpu_number: number of cpu to be used. Default value is "half".
+    '''
     pids = []
     fork = get_per_cpu(seq,cpu_number=cpu_number)
     for slice in fork:
