@@ -10,7 +10,9 @@ Quick Start
 
 Installation
 
+```shell
 pip install git+https://github.com/IncubatorShokuhou/python-parallelize.git
+```
 
 Parallel iteration with a process/CPU:
 
