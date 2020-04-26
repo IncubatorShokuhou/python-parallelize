@@ -8,6 +8,10 @@ Simple fork/join parallelism with Python's `for` loop
 Quick Start
 -----------
 
+Installation
+
+pip install git+https://github.com/IncubatorShokuhou/python-parallelize.git
+
 Parallel iteration with a process/CPU:
 
 ```python
