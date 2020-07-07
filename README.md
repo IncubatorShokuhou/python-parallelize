@@ -20,6 +20,7 @@ Parallel iteration with a process/CPU:
 import os
 from parallelize import parallelize
     
-for i in parallelize(range(100),cpu_number = "half"):   #cpu_number can be "all","half","quarter" or any integer
+for i in parallelize(range(100),n_jobs = "half"):   
+#n_jobs can be "all","half","quarter" or any integer not more than the number of cpus( which can be caculated by multiprocessing.cpu_count())
     print(os.getpid(), i)
 ```
