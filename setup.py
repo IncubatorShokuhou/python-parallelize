@@ -5,7 +5,7 @@ from distutils.core import setup
 
 
 setup(name='python-parallelize',
-      version='1.0.0.0_qb',
+      version='1.0.0.2',
       description='Make the for loop run in parallel',
       author='IncubatorShokuhou',
       author_email='lh@lasg.iap.ac.cn',
