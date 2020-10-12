@@ -1,9 +1,10 @@
 python-parallelize
 ==================
-
+人肉闭包好！
+==================
 Simple fork/join parallelism with Python's `for` loop
 
-人肉闭包好！
+
 
 Quick Start
 -----------
