@@ -2,7 +2,7 @@
 from itertools import islice
 import os
 import multiprocessing
-__version__ = '1.0.0.0_qb'
+__version__ = '1.0.0.2'
 def get_per_cpu(seq,n_jobs= "half"):
     if isinstance(n_jobs, int):
         n_jobs_in = n_jobs
@@ -23,9 +23,8 @@ def get_per_cpu(seq,n_jobs= "half"):
                 raise
     if n_jobs_in > multiprocessing.cpu_count():
         print("n_jobs is too large. Turn into max cpu count.")
-        n_jobs_in1 = min(n_jobs_in,multiprocessing.cpu_count())
-        n_jobs_in = cpu_number_in1
-    #print("cpu number:",cpu_number_in)
+        n_jobs_in = multiprocessing.cpu_count()
+
     def per_cpu(seq,n_jobs_in):
         return (islice(seq, cpu, None, n_jobs_in) for cpu in range(n_jobs_in))
     return per_cpu(seq,n_jobs_in)
