@@ -9,11 +9,11 @@ def get_per_cpu(seq,n_jobs= "half"):
     elif isinstance(n_jobs,float):
         n_jobs_in = int(n_jobs)
     elif isinstance(n_jobs,str):
-        if n_jobs == "all":
+        if n_jobs.lower() == "all":
             n_jobs_in = multiprocessing.cpu_count()
-        elif n_jobs == "half":
+        elif n_jobs.lower() == "half":
             n_jobs_in = int( multiprocessing.cpu_count() / 2 )
-        elif n_jobs == "quarter":
+        elif n_jobs.lower() == "quarter":
             n_jobs_in = int( multiprocessing.cpu_count() / 4 )
         else:
             try:
